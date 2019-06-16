@@ -46,10 +46,10 @@ Following from the previous section:
 ### Secure the server
 Following from the previous section:
 1. Update all currently installed packages on the [instance server][5] through the SSH connection in your terminal, run the following commands:  
-`$ sudo apt update`
+`$ sudo apt update`  
 __NOTE:__ To view the upgradable packages, run the command `$ apt list --upgradable`  
-`$ sudo apt upgrade`
-__NOTE:__ In the terminal a message about restarting services during package upgrades: select <Yes>
+`$ sudo apt upgrade`  
+__NOTE:__ In the terminal a message about restarting services during package upgrades: select _Yes_
 __NOTE:__ In the terminal a message about configuring openssh-server: select _install the package maintainer's version_
 __NOTE:__ In the terminal a message about grub menu: select _install the package maintainer's version_
 `$ exit`
@@ -62,7 +62,7 @@ __NOTE:__ In the terminal a message about grub menu: select _install the package
     * Search for `#Port 22` & change to `Port 2200`.
     * Save the file `Ctrl + O`, then press Enter.
     * Exit nano, `Ctrl + X`
-    * Restart SSH service `$ sudo service ssh restart`
+    * Restart SSH service `$ sudo service ssh restart`  
 [Learn more about nano][6]
 1. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), & NTP (port 123):
     * Check the status of UFW:  
@@ -80,14 +80,14 @@ __NOTE:__ In the terminal a message about grub menu: select _install the package
     `$ sudo ufw allow 123/udp` or `$ sudo ufw allow ntp`
     * Check added user rules `$ sudo ufw show added`
     * Activate UFW `$ sudo ufw enable`
-    * Close the SSH connection `$ exit`
+    * Close the SSH connection `$ exit`  
 Source: [DigitalOcean][7]
 1. Update firewall to match changes on [Amazon Lightsail][1] [instance server][5]:
     * On the [instance server][5], click on the three vertical dots & click on Manage.
     * Click the Networking tab.
     * Scroll down to Firewall section & click on __Add another__.
     * Update the rules to match the rules applied above.
-    * Scroll back to the top & click on __Reboot__.
+    * Scroll back to the top & click on __Reboot__.  
 __NOTE:__ From this point forward, to SSH into the [instance server][5], run the command:  
 `$ ssh -i .ssh/ubuntu_motorbike_catalog.rsa -p 2200 ubuntu@35.176.196.186`
 1. Test the above command.
@@ -265,7 +265,7 @@ The project to be deployed will be [Motorbike Catalog][8]
         ```
         * Disable default vhost `$ sudo a2dissite 000-default.conf`
         * Enable motorbikecatalog vhost `$ sudo a2ensite 001-motorbikecatalog.conf`
-        * Restart Apache seerver `$ sudo service apache2 restart`
+        * Restart Apache seerver `$ sudo service apache2 restart`  
 [Source: DigitalOcean][9]
 1. Make sure that the `.git` directory is not publicly accessible via the browser:
     * Change to `apache2` directory `$ cd /etc/apache2/`
