@@ -18,7 +18,7 @@ __IP ADDRESS:__ 35.176.196.186 __HTTP ALIAS ADDRESS:__ 35.176.196.186.xip.io __S
     * You can change the hostname or leave the default selected.
 1. Click on __Create instance__.
 1. The new instance will appear, then click on it.
-1. Take note of the __Public IP__: 35.176.196.186 & __Username__: ubuntu
+1. Take note of the __Public IP__: 35.176.196.186 & __Username__: ubuntu  
 [Learn more about instances][3]
 
 ### Configure SSH for the server
@@ -129,7 +129,7 @@ __NOTE:__ From this point forward, to SSH into the [instance server][5], run the
             * Exit nano, `Ctrl + X`
         * Restart SSH service `$ sudo service ssh restart`
         * Logout as __grader__ `$ exit`
-        * Close the SSH connection `$ exit`
+        * Close the SSH connection `$ exit`  
 __NOTE:__ You can now SSH into the [instance server][5] as __grader__, run the command:  
         `$ ssh -i .ssh/grader_key -p 2200 grader@35.176.196.186`
 1. Test the above command.
