@@ -275,6 +275,7 @@ The project to be deployed will be [Motorbike Catalog][8]
       Require all denied
     </DirectoryMatch>
     ```
+    * Restart Apache `$ sudo service apache2 restart`
 
 [Thanks to Daniel A (jungleBadger) for pointing me to his project][10]
 
